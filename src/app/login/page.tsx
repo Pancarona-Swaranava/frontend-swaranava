@@ -10,7 +10,8 @@ export default function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/questions/q1");
+
+    router.push("/questions/step");
   };
 
   return (
