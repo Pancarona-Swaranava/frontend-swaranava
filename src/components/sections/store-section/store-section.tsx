@@ -11,9 +11,8 @@ const cards = [
 ];
 
 export default function StoreSection() {
-  const [centerIndex, setCenterIndex] = useState(1); // index 1 = kartu tengah
+  const [centerIndex, setCenterIndex] = useState(1); 
 
-  // posisi tiap kartu (kiri, tengah, kanan)
   const getPosition = (index: number) => {
     if (index === centerIndex) return "center";
     if (index === (centerIndex + 1) % 3) return "right";
@@ -40,7 +39,6 @@ export default function StoreSection() {
         Lihat lebih banyak
       </button>
 
-      {/* ================== SLIDER ================== */}
       <div className="relative w-full flex justify-center mt-16 h-[320px]">
         {cards.map((card, index) => {
           const pos = getPosition(index);

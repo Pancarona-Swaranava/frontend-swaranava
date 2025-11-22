@@ -30,7 +30,6 @@ const EVENTS: EventItem[] = [
 ];
 
 export default function EventSection() {
-  // event yang lagi aktif (ditampilkan besar di kanan)
   const [activeId, setActiveId] = useState<number>(3);
 
   return (
@@ -38,7 +37,6 @@ export default function EventSection() {
       id="event"
       className="container1100 py-[120px] flex flex-col md:flex-row gap-[60px]"
     >
-      {/* KIRI: TITLE + DESC + BUTTON */}
       <div className="md:w-1/2">
         <h2 className="text-[40px] font-bold leading-tight">
           Lorem Ipsum dolor
@@ -57,12 +55,10 @@ export default function EventSection() {
         </button>
       </div>
 
-      {/* KANAN: 3 KARTU VERTICAL */}
       <div className="md:w-1/2 flex items-stretch justify-end gap-6">
         {EVENTS.map((event) => {
           const isActive = event.id === activeId;
 
-          // kartu besar atau kartu kurus
           if (isActive) {
             return (
               <div
@@ -84,7 +80,6 @@ export default function EventSection() {
             );
           }
 
-          // kartu kurus (tulisan vertikal)
           return (
             <button
               key={event.id}
