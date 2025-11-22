@@ -1,4 +1,5 @@
-import Navbar from "@/components/layout/navbar/navbar";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 
 import HeroSection from "@/components/sections/hero-section/hero-section";
 import AboutSection from "@/components/sections/about-section/about-section";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <CommunitySection />
       <FAQSection />
       <ContactSection />
+      <Footer />
     </>
   );
 }
