@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-heading: var(--font-flatory);
+  --font-sub: var(--font-flatory);
+  --font-body: var(--font-glacial);
 }
 
 @theme inline {
@@ -19,10 +22,26 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+
+.subheading {
+  font-family: var(--font-sub), Arial, Helvetica, sans-serif;
+}
+
+p, span, button, a, label, input, textarea, li {
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 
 .container1100 {
